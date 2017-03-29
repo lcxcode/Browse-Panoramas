@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrowsePanorama.Plugins", "BrowsePanorama.Plugins.csproj", "{03444957-E89C-C62E-0FF1-83C4A8FFC213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrowsePanorama", "BrowsePanorama.csproj", "{8C70E56A-962C-970C-9092-1CB30CB65F62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrowsePanorama.Editor", "BrowsePanorama.Editor.csproj", "{9C1CB283-0A47-3D98-0D70-EFBF64DA748A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03444957-E89C-C62E-0FF1-83C4A8FFC213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03444957-E89C-C62E-0FF1-83C4A8FFC213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03444957-E89C-C62E-0FF1-83C4A8FFC213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03444957-E89C-C62E-0FF1-83C4A8FFC213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C70E56A-962C-970C-9092-1CB30CB65F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C70E56A-962C-970C-9092-1CB30CB65F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C70E56A-962C-970C-9092-1CB30CB65F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C70E56A-962C-970C-9092-1CB30CB65F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C1CB283-0A47-3D98-0D70-EFBF64DA748A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1CB283-0A47-3D98-0D70-EFBF64DA748A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1CB283-0A47-3D98-0D70-EFBF64DA748A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1CB283-0A47-3D98-0D70-EFBF64DA748A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
