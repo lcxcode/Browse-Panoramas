@@ -39,6 +39,8 @@ public class UIFindDirectory : MonoBehaviour
 
     public Text PathText;
 
+
+
     private void Awake()
     {
         if(Instance == null)
@@ -52,10 +54,9 @@ public class UIFindDirectory : MonoBehaviour
     void Start()
     {
         btnItem = Resources.Load<GameObject>("Prefabs/Button");
-        //_findDirectory = new FindDirectory("E:/Test");
-        //_findDirectory = new FindDirectory();
+
         FindDirectory.Instance.CurrentDirectoryPath = "E:/";
-        //_findDirectory.CurrentDirectoryPath = "E:/Test";
+
         Find();
     }
 
@@ -168,16 +169,15 @@ public class UIFindDirectory : MonoBehaviour
     void Find()
     {
         PathText.text = FindDirectory.Instance.CurrentDirectoryPath;
-        //Debug.Log("开始查找");
+
         //清空当前界面内容
         for (int i = 0; i < transP.childCount; i++)
         {
             btnListPool.Add(transP.GetChild(i).gameObject);
             transP.GetChild(i).gameObject.SetActive(false);
         }
-        //Debug.Log(_findDirectory.CurrentDirectoryPath);
+
         //执行查找
-        //_findDirectory.Find();
         FindDirectory.Instance.Find();
 
       StartCoroutine(WaitForFound());
@@ -238,14 +238,11 @@ public class UIFindDirectory : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         //获取查找到的文件的名称
-        //_directoryName = _findDirectory.AllFileName;
         _directoryName = FindDirectory.Instance.AllFileName;
 
         while (_directoryName == null)
         {
-            //_directoryName = _findDirectory.AllFileName;
             _directoryName = FindDirectory.Instance.AllFileName;
-            //Debug.Log("没找到===");
             yield return null;
         }
 
@@ -253,16 +250,10 @@ public class UIFindDirectory : MonoBehaviour
         foreach (string s in _directoryName)
         {
 
-            //GameObject btn;
-            //Debug.Log(s);
-
             //生成Button,根据对象池
             if (btnListPool.Count  >  0)
             {
                 GameObject btnTemp;
-                //btn = btnListPool[0];
-                //btn.gameObject.SetActive(true);
-                //btnListPool.Remove(btnListPool[0]);
                 btnTemp = btnListPool[0];
                 btnListPool.Remove(btnListPool[0]);
                 btnTemp.SetActive(true);
@@ -327,20 +318,17 @@ public class UIFindDirectory : MonoBehaviour
         {
             return;
         }
-        //Debug.LogWarning(ClickedObject.name);
 
         //判断是否是文件夹
         if (FindDirectory.Instance.DicDirectory.ContainsKey (ClickedObject.name))     //_findDirectory.DirectoriesName.Contains(go1.name))
         {
             //打开文件夹
-            //Debug.Log("打开文件夹");
             BtnClicked(FindDirectory.Instance.DicDirectory[ClickedObject.name]);     //_findDirectory.DicName_Path[go1.name]);
         }
 
         if(FindDirectory.Instance.DicFile.ContainsKey(ClickedObject.name))
         {
             //加载图片
-            //Debug.Log("加载图片");
             StartCoroutine(WaitLoadDone(FindDirectory.Instance.DicFile[ClickedObject.name] ));
         }
     }
@@ -352,7 +340,7 @@ public class UIFindDirectory : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
 
-        Texture tempTex = C_Downloader.LoadByIO(strImagePath);// FindDirectory.Instance.DicName_Path[go2.name]);// _findDirectory.DicName_Path[go2.name]);
+        Texture tempTex = C_Downloader.LoadByIO(strImagePath);
 
         while(tempTex == null)
         {
