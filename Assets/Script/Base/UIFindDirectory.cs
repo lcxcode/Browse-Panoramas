@@ -31,12 +31,17 @@ public class UIFindDirectory : MonoBehaviour
     /// </summary>
     public Transform transP;
 
-
+    /// <summary>
+    /// 当前类的实例
+    /// </summary>
     public static UIFindDirectory Instance;
 
     [HideInInspector]
     public GameObject ClickedObject;
 
+    /// <summary>
+    /// 显示路径信息
+    /// </summary>
     public Text PathText;
 
 
@@ -150,7 +155,10 @@ public class UIFindDirectory : MonoBehaviour
       Find();
     }
 
-
+    /// <summary>
+    /// 返回按键点击事件
+    /// </summary>
+    /// <param name="filePath"></param>
     void ReturnBtnClick(string filePath)
     {
         if(filePath == null)
@@ -163,9 +171,14 @@ public class UIFindDirectory : MonoBehaviour
         Find();
     }
 
+    /// <summary>
+    /// 存储文件名称
+    /// </summary>
     string[] _directoryName;
 
-
+    /// <summary>
+    /// 按路径查找文件
+    /// </summary>
     void Find()
     {
         PathText.text = FindDirectory.Instance.CurrentDirectoryPath;
@@ -232,7 +245,10 @@ public class UIFindDirectory : MonoBehaviour
         #endregion
     }
 
-
+    /// <summary>
+    /// 协同，等待查找完成
+    /// </summary>
+    /// <returns></returns>
     IEnumerator WaitForFound()
     {
         yield return new WaitForEndOfFrame();
@@ -263,8 +279,6 @@ public class UIFindDirectory : MonoBehaviour
                 //绑定点击事件到按钮上
                 btnTemp.GetComponent<Button>().onClick.RemoveAllListeners();
                 btnTemp.GetComponent<Button>().onClick.AddListener(delegate { Load(); });
-
-
             }
             else
             {

@@ -1,0 +1,32 @@
+[33mcommit 971afd86bfc7c0e9d8a291d40fb94013e8ae6cfb[m
+Author: lcx <1521205297@qq.com>
+Date:   Thu Mar 30 16:02:51 2017 +0800
+
+    修改readme
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex f64f7eb..7643d15 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,15 +1,15 @@[m
+ # Browse-Panoramas[m
+ ---[m
+[31m-##基于Unity3D-5.3.4f1开发[m
+[32m+[m[32m## 基于Unity3D-5.3.4f1开发[m
+ [m
+[31m-#####实现HTC VIVE浏览全景图片及全景视频[m
+[32m+[m[32m##### 实现HTC VIVE浏览全景图片及全景视频[m
+ [m
+[31m-一、实现在VR头盔中浏览文件夹[m
+[32m+[m[32m1. 实现在VR头盔中浏览文件夹[m
+ [m
+[31m-二、实现在VR头盔中打开文件夹[m
+[32m+[m[32m2. 实现在VR头盔中打开文件夹[m
+ [m
+[31m-三、用于浏览电脑中的全景图片[m
+[32m+[m[32m3. 用于浏览电脑中的全景图片[m
+ [m
+[31m-四、用于播放电脑中的全景视频[m
+[32m+[m[32m4. 用于播放电脑中的全景视频[m
+ [m
+ [m
